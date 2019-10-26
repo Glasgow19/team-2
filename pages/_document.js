@@ -14,7 +14,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="/static/demo.css" rel="stylesheet" />
+          <link href="/css/demo.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />
