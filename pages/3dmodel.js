@@ -1,6 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import Nav from '../components/nav';
+import MyComponent from '../components/nav';
+
+
+// window.onload = function() {
+//   MyComponent();
+// };
 
 const Home = () => (
   <div>
@@ -9,12 +14,12 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <Nav />
+    <MyComponent/>
 
     <div className="hero">
       <h1 className="title">Hello, changes!</h1>
       <p className="description">
-        There's so much exciting things happening from here!
+        mycomponent data: MyComponent();
       </p>
     </div>
   </div>
