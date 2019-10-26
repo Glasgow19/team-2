@@ -1,43 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import Nav from '../components/nav';
+
+import PostList from '../components/PostList';
+import EventList from '../components/EventList';
 
 import fetch from 'isomorphic-fetch';
 import wp from '../common/wp';
 
 const Home = ({ posts, events, err }) => {
   if (err) {
+    // TODO: style this!
     return (
       <div>
         Oh no there's an error: <pre>{err}</pre>
       </div>
     );
   }
-  // TODO: this should be part of a component!
-  const postList = posts.map(post => {
-    return (
-      <li key ={post.id}>
-        <Link
-          href={{
-            pathname: '/article/[slug]',
-            query: { article: JSON.stringify(post) }
-          }}
-          as={`/article/${post.slug}`}
-        >
-          <a>{post.title.rendered}</a>
-        </Link>
-      </li>
-    );
-  });
-
-  const eventList = events.map(event => {
-    return (
-      <li key={event.id}>
-        <a href={event.url}>{event.name.text}</a>
-      </li>
-    );
-  });
 
   return (
     <div>
@@ -55,10 +34,11 @@ const Home = ({ posts, events, err }) => {
 
         <div>Example content here. CSS is loaded from a static file!</div>
         <div>
-          post list:<ul>{postList}</ul>
+          post list:
+          <PostList posts={posts} />
         </div>
         <div>
-          event list: <ul>{eventList}</ul>
+          event list: <EventList events={events} />
         </div>
       </div>
     </div>
