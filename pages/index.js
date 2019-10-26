@@ -7,10 +7,14 @@ import wp from '../common/wp';
 
 const Home = ({ posts }) => {
   const postList = posts.map(post => {
+    post.content.rendered += 'yooooooo';
     return (
       <li>
         <Link
-          href={{ pathname: '/article/[slug]' }}
+          href={{
+            pathname: '/article/[slug]',
+            query: { article: JSON.stringify(post) }
+          }}
           as={`/article/${post.slug}`}
         >
           <a>{post.title.rendered}</a>
@@ -23,7 +27,6 @@ const Home = ({ posts }) => {
     <div>
       <Head>
         <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Nav />
