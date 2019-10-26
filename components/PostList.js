@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import wp from '../common/wp';
 
 export default ({ posts }) => {
   const postList = posts.map(post => {
@@ -17,5 +18,5 @@ export default ({ posts }) => {
     );
   });
 
-  return <ul>{postList}</ul>;
+  return <ul className="articles">{postList}</ul>;
 };
