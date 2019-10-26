@@ -17,7 +17,7 @@ const Home = ({ posts, events, err }) => {
   // TODO: this should be part of a component!
   const postList = posts.map(post => {
     return (
-      <li>
+      <li key ={post.id}>
         <Link
           href={{
             pathname: '/article/[slug]',
