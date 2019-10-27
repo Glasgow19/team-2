@@ -29,6 +29,12 @@ nav a {
   color: #eee;
 }
 
+.fakebutton {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: thin;
+}
+
 /* ARTICLES */
 .articles {
   display: grid;
@@ -61,3 +67,5 @@ nav a {
   color: #333;
   font-size: 1em;
 }
+
+

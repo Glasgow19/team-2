@@ -14,6 +14,30 @@
   text-align: center;
 }
 
+.articletitle {
+margin: 0em 0 0.5em 0;
+color: #343434;
+font-weight: normal;
+font-family: 'Ultra', sans-serif;   
+font-size: 36px;
+line-height: 42px;
+text-transform: uppercase;
+text-shadow: 0 2px white, 0 3px #777;
+text-align: center;
+background-color: #F9B222;
+font-size: 50px;
+}
+
+.articledate {
+  padding-top: 0.5em;
+  text-align: right;
+  font-style: italic;
+}
+
+#text {
+  margin: 3.5em;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica,
@@ -26,3 +50,9 @@ a {
   text-decoration: none;
   font-size: 13px;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

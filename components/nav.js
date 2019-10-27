@@ -8,8 +8,8 @@ const Nav = () => (
       </Link>
     </section>
     <section className="right">
-      <a>This goes somewhere</a>
-      <a>maybe</a>
+      <a>Success stories</a>
+      <a>Clubs and activities</a>
     </section>
   </nav>
 );
