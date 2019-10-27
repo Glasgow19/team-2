@@ -137,3 +137,20 @@ ul.events li a {
 .eventDate {
   text-align: right;
 }
+
+.navButton {
+  display: block;
+  padding: 0.5em;
+  border: 1px solid #f9b222;
+  box-shadow: 0 0 5px #f9b222;
+  border-radius: 1em;
+  font-weight: 500;
+  text-align: center;
+
+  transition: 0.3s all ease-in-out;
+}
+
+.navButton:hover {
+  box-shadow: 0 0 25px #f9b222;
+  cursor: pointer;
+}
