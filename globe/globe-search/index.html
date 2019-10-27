@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>WebGL Globe</title>
+  <title>Data Visualization</title>
   <meta charset="utf-8">
   <style type="text/css">
     html {
@@ -97,12 +97,9 @@
 
 
 <div id="title">
-  Google Search Volume by Language
+  Average Computer Science Graduate Salary by country
 </div>
 
-<a id="ce" href="http://www.chromeexperiments.com/globe">
-  <span>This is a Chrome Experiment</span>
-</a>
 
 
 <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
@@ -122,7 +119,7 @@
   });
 
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', '/globe-search/search.json', true);
+  xhr.open('GET', '/globe-search/salaries.json', true);
   xhr.onreadystatechange = function(e) {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
