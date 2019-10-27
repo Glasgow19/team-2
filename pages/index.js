@@ -37,6 +37,27 @@ const Home = ({ posts, events, err }) => {
             >
               <a className="navButton">Success Stories</a>
             </Link>
+            <Link
+              href={{
+                pathname: '/videos'
+              }}
+            >
+              <a className="navButton">Videos</a>
+            </Link>
+            <Link
+              href={{
+                pathname: '/kits'
+              }}
+            >
+              <a className="navButton">Project Kits</a>
+            </Link>
+            <Link
+              href={{
+                pathname: '/money-globe'
+              }}
+            >
+              <a className="navButton">CS Graduate Salary Globe</a>
+            </Link>
           </div>
         </div>
       </section>
@@ -46,6 +67,8 @@ const Home = ({ posts, events, err }) => {
       <div className="tertiary orange">
         <EventList events={events} />
       </div>
+      {/** this is not nice at all*/}
+      <div className="lady" />
     </div>
   );
 };
