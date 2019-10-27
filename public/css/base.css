@@ -17,6 +17,12 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+
+  background: #a7358c;
+}
+.left a img {
+  height: 5vh;
 }
 
 nav a {
@@ -48,8 +54,8 @@ h2.subHeading {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
   padding: 0;
   max-width: 100%;
 }
@@ -73,7 +79,6 @@ h2.subHeading {
   padding: 1em;
   height: 3em;
   color: #333;
-  /* background: rgba(255, 255, 255, 0.9); */
   background: #74529e;
 
   border-radius: 5px;
@@ -84,7 +89,8 @@ h2.subHeading {
 
 .articles li:hover {
   box-shadow: 15px 15px 20px #33333338;
-  transform: translate3d(-1px, -1px, 0px);
+  transform: translate3d(-1px, -2px, 0px);
+  cursor: pointer;
 }
 
 .articles li a {
@@ -130,4 +136,21 @@ ul.events li a {
 
 .eventDate {
   text-align: right;
+}
+
+.navButton {
+  display: block;
+  padding: 0.5em;
+  border: 1px solid #f9b222;
+  box-shadow: 0 0 5px #f9b222;
+  border-radius: 1em;
+  font-weight: 500;
+  text-align: center;
+
+  transition: 0.3s all ease-in-out;
+}
+
+.navButton:hover {
+  box-shadow: 0 0 25px #f9b222;
+  cursor: pointer;
 }

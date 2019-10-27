@@ -4,7 +4,9 @@ const Nav = () => (
   <nav>
     <section className="left">
       <Link href="/">
-        <a>Home</a>
+        <a>
+          <img src="/dressCODE_Final_white.png" />
+        </a>
       </Link>
     </section>
     <section className="right">
