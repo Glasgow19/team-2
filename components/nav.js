@@ -1,3 +1,6 @@
+import React from 'react';
+import useDeviceOrientation from '@rehooks/device-orientation';
+
 import Link from 'next/link';
 
 const Nav = () => (
@@ -13,4 +16,18 @@ const Nav = () => (
   </nav>
 );
 
-export default Nav;
+function MyComponent() {
+  let value = useDeviceOrientation();
+  console.log(value);
+  return (
+    <div>
+      <p>Absolute: {value.absolute}</p>
+      <p>Alpha: {value.alpha}</p>
+      <p>Beta: {value.beta}</p>
+      <p>Gamma: {value.gamma}</p>
+    </div>
+  );
+}
+
+
+export default MyComponent;
