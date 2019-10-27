@@ -8,8 +8,11 @@ const Nav = () => (
       </Link>
     </section>
     <section className="right">
+      <Link href={{
+        pathname: '/sustories'
+      }}>
       <a>Success stories</a>
-      <a>Activities</a>
+      </Link>
     </section>
   </nav>
 );
