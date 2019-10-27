@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Nav from '../components/nav';
-
 import PostList from '../components/PostList';
 import EventList from '../components/EventList';
 
