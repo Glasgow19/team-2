@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Nav = () => (
+const Nav = ({ posts }) => (
   <nav>
     <section className="left">
       <Link href="/">
@@ -8,7 +8,11 @@ const Nav = () => (
       </Link>
     </section>
     <section className="right">
+      <Link href={{
+        pathname: '/sustories'
+      }} as={'/sustories'}>
       <a>Success stories</a>
+      </Link>
       <a>Clubs and activities</a>
     </section>
   </nav>
