@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Nav from '../components/nav';
 import PostList from '../components/PostList';
 import EventList from '../components/EventList';
@@ -22,23 +23,28 @@ const Home = ({ posts, events, err }) => {
       <Head>
         <title>Home</title>
       </Head>
+      <section className="main">
+        <Nav />
 
-      <Nav />
-
-      <div className="hero">
-        <h1 className="title">Server Rendered React App!</h1>
-        <p className="description">
-          There's so much exciting things happening from here!
-        </p>
-
-        <div>Example content here. CSS is loaded from a static file!</div>
-        <div>
-          post list:
-          <PostList posts={posts} />
+        <div className="hero">
+          <h1 className="title">🥰💻</h1>
+          <p className="description">We Love Computers!</p>
+          <div className="buttons">
+            <Link
+              href={{
+                pathname: '/sustories'
+              }}
+            >
+              <a className="navButton">Success Stories</a>
+            </Link>
+          </div>
         </div>
-        <div>
-          event list: <EventList events={events} />
-        </div>
+      </section>
+      <div className="secondary yellow">
+        <PostList posts={posts} />
+      </div>
+      <div className="tertiary orange">
+        <EventList events={events} />
       </div>
     </div>
   );
@@ -51,7 +57,7 @@ Home.getInitialProps = async () => {
   try {
     const rawEvents = await fetch(
       // `https://www.eventbriteapi.com/v3/events/search/?token=${process.env.EVENTBRITE_KEY}&organizer.id=18547082085`
-      'https://pastebin.com/raw/tXtFY7xm'
+      'https://ugh.milesgrnt.now.sh/server.js'
     );
     const events = await rawEvents.json();
     if (!events.events) {

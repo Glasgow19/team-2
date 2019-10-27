@@ -1,8 +1,20 @@
 import React from 'react';
 import useDeviceOrientation from '@rehooks/device-orientation';
 
+import Link from 'next/link';
 
-const Nav = () => <>Example component!</>;
+const Nav = () => (
+  <nav>
+    <section className="left">
+      <Link href="/">
+        <a>
+          <img src="/dressCODE_Final_white.png" />
+        </a>
+      </Link>
+    </section>
+    <section className="right"></section>
+  </nav>
+);
 
 function MyComponent() {
   let value = useDeviceOrientation();

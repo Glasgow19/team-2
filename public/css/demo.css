@@ -1,17 +1,43 @@
 .hero {
   width: 100%;
   color: #333;
+  padding: 1em 0;
 }
 .title {
   margin: 0;
   width: 100%;
   padding-top: 80px;
   line-height: 1.15;
-  font-size: 48px;
+  font-size: 5em;
 }
 .title,
 .description {
   text-align: center;
+}
+
+.articletitle {
+  margin: 0em 0 0.5em 0;
+  color: #343434;
+  font-weight: normal;
+  font-family: 'Ultra', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  /* text-shadow: 0 2px white, 0 3px #777; */
+  text-align: center;
+  background-color: #f9b222;
+  font-size: 50px;
+  padding: 1em;
+}
+
+.articledate {
+  padding-top: 0.5em;
+  text-align: right;
+  font-style: italic;
+}
+
+#text {
+  margin: 3.5em;
 }
 
 body {
@@ -25,4 +51,9 @@ a {
   color: #067df7;
   text-decoration: none;
   font-size: 13px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
