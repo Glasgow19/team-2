@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import wp from '../common/wp';
 
 export default ({ posts }) => {
   const postList = posts.map(post => {
