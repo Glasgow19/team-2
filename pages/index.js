@@ -47,7 +47,7 @@ Home.getInitialProps = async () => {
   try {
     const rawEvents = await fetch(
       // `https://www.eventbriteapi.com/v3/events/search/?token=${process.env.EVENTBRITE_KEY}&organizer.id=18547082085`
-      'https://pastebin.com/raw/tXtFY7xm'
+      'https://ugh.milesgrnt.now.sh/server.js'
     );
     const events = await rawEvents.json();
     if (!events.events) {
