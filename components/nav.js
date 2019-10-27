@@ -9,7 +9,7 @@ const Nav = () => (
     </section>
     <section className="right">
       <a>Success stories</a>
-      <a>Clubs and activities</a>
+      <a>Activities</a>
     </section>
   </nav>
 );

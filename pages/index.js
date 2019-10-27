@@ -23,13 +23,14 @@ const Home = ({ posts, events, err }) => {
       <Head>
         <title>Home</title>
       </Head>
+      <section className="main">
+        <Nav />
 
-      <Nav />
-
-      <div className="hero">
-        <h1 className="title">🥰</h1>
-        <p className="description">We Love Computers! AND BUTTONS1</p>
-      </div>
+        <div className="hero">
+          <h1 className="title">🥰💻</h1>
+          <p className="description">We Love Computers!</p>
+        </div>
+      </section>
       <div>
         <PostList posts={posts} />
       </div>

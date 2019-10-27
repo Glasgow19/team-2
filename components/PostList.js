@@ -12,7 +12,7 @@ export default ({ posts }) => {
           }}
           as={`/article/${post.slug}`}
         >
-          <a>{post.title.rendered}</a>
+          <a dangerouslySetInnerHTML={{ __html: post.title.rendered }}></a>
         </Link>
       </li>
     );
