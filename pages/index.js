@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Nav from '../components/nav';
 import PostList from '../components/PostList';
 import EventList from '../components/EventList';
@@ -28,6 +29,15 @@ const Home = ({ posts, events, err }) => {
         <div className="hero">
           <h1 className="title">🥰💻</h1>
           <p className="description">We Love Computers!</p>
+          <div className="buttons">
+            <Link
+              href={{
+                pathname: '/sustories'
+              }}
+            >
+              <a className="navButton">Success Stories</a>
+            </Link>
+          </div>
         </div>
       </section>
       <div className="secondary yellow">
