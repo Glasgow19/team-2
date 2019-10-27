@@ -22,23 +22,19 @@ const Home = ({ posts, events, err }) => {
       <Head>
         <title>Home</title>
       </Head>
+      <section className="main">
+        <Nav />
 
-      <Nav />
-
-      <div className="hero">
-        <h1 className="title">Server Rendered React App!</h1>
-        <p className="description">
-          There's so much exciting things happening from here!
-        </p>
-
-        <div>Example content here. CSS is loaded from a static file!</div>
-        <div>
-          post list:
-          <PostList posts={posts} />
+        <div className="hero">
+          <h1 className="title">🥰💻</h1>
+          <p className="description">We Love Computers!</p>
         </div>
-        <div>
-          event list: <EventList events={events} />
-        </div>
+      </section>
+      <div className="secondary yellow">
+        <PostList posts={posts} />
+      </div>
+      <div className="tertiary orange">
+        <EventList events={events} />
       </div>
     </div>
   );

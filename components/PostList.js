@@ -1,21 +1,30 @@
 import Link from 'next/link';
+import wp from '../common/wp';
 
 export default ({ posts }) => {
   const postList = posts.map(post => {
     return (
-      <li key={post.id}>
-        <Link
-          href={{
-            pathname: '/article/[slug]',
-            query: { article: JSON.stringify(post) }
-          }}
-          as={`/article/${post.slug}`}
-        >
-          <a>{post.title.rendered}</a>
-        </Link>
-      </li>
+      <Link
+        key={post.id}
+        href={{
+          pathname: '/article/[slug]',
+          query: { article: JSON.stringify(post) }
+        }}
+        as={`/article/${post.slug}`}
+      >
+        <li>
+          {/* dangerouslySet OK to use becuase wordpress handles escaping */}
+          <a dangerouslySetInnerHTML={{ __html: post.title.rendered }}></a>
+          {/* <p dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}></p> */}
+        </li>
+      </Link>
     );
   });
 
-  return <ul>{postList}</ul>;
+  return (
+    <>
+      <h2 className="subHeading">Articles</h2>
+      <ul className="articles">{postList}</ul>
+    </>
+  );
 };

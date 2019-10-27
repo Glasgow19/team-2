@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Nav from '../../components/nav';
 import wp from '../../common/wp';
 
 const Article = ({ err, article }) => {
@@ -11,13 +12,19 @@ const Article = ({ err, article }) => {
   }
   return (
     <div>
+      <Nav />
       <Head>
         <title>Article - todo</title>
       </Head>
-      Hey! I'm an article. My name is {article.title.rendered}, and I was posted{' '}
-      {article.modified}. Here's my content:
+      <header className="articletitle">{article.title.rendered}</header>
+      <div id = "text">
+        <div  dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+        <div className="articledate"> This article was posted{' '}
+        {article.modified}. </div>
+      </div>
       {/*bad!! this should not be like this */}
-      <div dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+      
+
     </div>
   );
 };
