@@ -17,8 +17,12 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   background: #a7358c;
+}
+.left a img {
+  height: 5vh;
 }
 
 nav a {
