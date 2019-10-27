@@ -16,15 +16,18 @@ const Article = ({ err, article }) => {
       <Head>
         <title>Article - todo</title>
       </Head>
-      <header className="articletitle">{article.title.rendered}</header>
-      <div id = "text">
-        <div  dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
-        <div className="articledate"> This article was posted{' '}
-        {article.modified}. </div>
+      <header
+        className="articletitle"
+        dangerouslySetInnerHTML={{ __html: article.title.rendered }}
+      ></header>
+      <div id="text">
+        <div dangerouslySetInnerHTML={{ __html: article.content.rendered }} />
+        <div className="articledate">
+          {' '}
+          This article was posted {article.modified}.{' '}
+        </div>
       </div>
       {/*bad!! this should not be like this */}
-      
-
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Nav from '../components/nav';
-
 import PostList from '../components/PostList';
 import EventList from '../components/EventList';
 
@@ -23,18 +22,19 @@ const Home = ({ posts, events, err }) => {
       <Head>
         <title>Home</title>
       </Head>
+      <section className="main">
+        <Nav />
 
-      <Nav />
-
-      <div className="hero">
-        <h1 className="title">🥰</h1>
-        <p className="description">We Love Computers! AND BUTTONS1</p>
-      </div>
-      <div>
+        <div className="hero">
+          <h1 className="title">🥰💻</h1>
+          <p className="description">We Love Computers!</p>
+        </div>
+      </section>
+      <div className="secondary yellow">
         <PostList posts={posts} />
       </div>
-      <div>
-        event list: <EventList events={events} />
+      <div className="tertiary orange">
+        <EventList events={events} />
       </div>
     </div>
   );

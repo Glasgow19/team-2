@@ -13,7 +13,6 @@ const Nav = () => (
       }}>
       <a>Success stories</a>
       </Link>
-      <a>Clubs and activities</a>
     </section>
   </nav>
 );
