@@ -3,9 +3,15 @@ export default ({ events }) => {
     return (
       <li key={event.id}>
         <a href={event.url}>{event.name.text}</a>
+        <p className="eventDate">{event.start.local}</p>
       </li>
     );
   });
 
-  return <ul>{eventList}</ul>;
+  return (
+    <>
+      <h2 className="subHeading">Events Coming Up</h2>
+      <ul className="events">{eventList}</ul>
+    </>
+  );
 };

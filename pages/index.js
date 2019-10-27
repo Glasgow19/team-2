@@ -31,11 +31,11 @@ const Home = ({ posts, events, err }) => {
           <p className="description">We Love Computers!</p>
         </div>
       </section>
-      <div>
+      <div className="secondary yellow">
         <PostList posts={posts} />
       </div>
-      <div>
-        event list: <EventList events={events} />
+      <div className="tertiary orange">
+        <EventList events={events} />
       </div>
     </div>
   );

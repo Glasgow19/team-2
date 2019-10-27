@@ -34,6 +34,15 @@ nav a {
   border-width: thin;
 }
 
+h2.subHeading {
+  color: rgba(0, 0, 0, 0.85);
+  padding: 0;
+  margin: 0;
+}
+.orange h2.subHeading {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* ARTICLES */
 .articles {
   display: grid;
@@ -42,14 +51,30 @@ nav a {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   padding: 0;
-  margin: 1em 0.5em;
+  max-width: 100%;
+}
+.secondary {
+  padding: 1em 0.5em;
+}
+.tertiary {
+  padding: 1em 0;
+}
+.tertiary h2 {
+  padding: 0 0.5em;
+}
+.yellow {
+  background: #f9b222;
+}
+.orange {
+  background: #ed6b4b;
 }
 .articles li {
   display: block;
   padding: 1em;
   height: 3em;
-  background: #f9b222;
   color: #333;
+  /* background: rgba(255, 255, 255, 0.9); */
+  background: #74529e;
 
   border-radius: 5px;
 
@@ -63,7 +88,7 @@ nav a {
 }
 
 .articles li a {
-  color: #333;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1em;
 }
 
@@ -73,4 +98,36 @@ section.main {
 
 nav a {
   color: #eee;
+}
+
+ul.events {
+  list-style-type: none;
+  line-height: 0.9;
+
+  margin: 0;
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+}
+
+ul.events li {
+  padding: 3em 0;
+  text-align: justify;
+  word-break: break-all;
+}
+ul.events li:nth-child(even) {
+  /* background: rgba(0, 0, 0, 0.75); */
+  background: #74529ed0;
+}
+
+ul.events li a {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 2em;
+}
+
+.eventDate {
+  text-align: right;
 }
